@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="1.css">
+    <script>
+        function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+    </script>
+    <title>Подготовка к ОГЭ</title>
+</head>
+<body>
+    <header>
+        <div class="rectangle">
+            <div class="menu">
+                <ul>
+                    <li class="li1"><a href="#">Теория</a></li>
+                    <li class="li2"><a href="#">Практика</a></li>
+                    <li class="li3"><a href="#">Задания</a></li>
+                </ul>
+            </div>
+        <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"></button>
+                <div id="myDropdown" class="dropdown-content" style="border-right-style: solid;border-right-width: 0px;left: 0px;border-left-style: solid;border-left-width: 0px;margin-right: 0px;margin-left: 10px; margin-top: 10px;">
+                  <a href="#">Вход</a>
+                  <a href="#">Регистрация</a>
+                </div>
+        </div> 
+        </div>
+    </header>
+    <div class="main-content">
+      <h1>Пройдите тестирование ОГЭ</h1>
+      <p>и определите свой уровень</p>
+      <button class="testbutt">Тест</button>
+    </div>
+</body>
+</html>
+
+<!-- <button hidden class="dropbtn"><img src="images/icon.svg"></button>
+<label for=""dropbtn><img src="images/icon.svg" class="icon1"></label>
+<div class="dropdown-content">
+    <a href="#">Ссылка 1</a>
+    <a href="#">Ссылка 2</a>
+    <a href="#">Ссылка 3</a>
+</div> -->
